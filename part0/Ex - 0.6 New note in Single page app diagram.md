@@ -16,3 +16,4 @@ sequenceDiagram
 
     Note right of browser: that's it, nothing else happens,<br/>page never reloaded once
 ```
+`

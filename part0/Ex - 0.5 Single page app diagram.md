@@ -26,4 +26,4 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: JS takes the data and builds<br/>the list on the page by itself,<br/>no reload or anything
-```
+``` 
