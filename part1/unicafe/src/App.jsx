@@ -1,7 +1,10 @@
 import { useState } from 'react'
 
 const StatisticsLine = ({ text, operation }) => {
-  return <p>{text} {operation}</p>
+  return <tr>
+    <td>{text}</td>
+    <td>{operation}</td>
+  </tr>
 }
 
 const Statistics = ({ good, neutral, bad }) => {
@@ -15,14 +18,16 @@ const Statistics = ({ good, neutral, bad }) => {
   const positive = ((good / all) * 100).toFixed(1)
 
   return (
-    <div>
+    <table>
+      <tbody>
       <StatisticsLine text="good" operation={good} />
       <StatisticsLine text="neutral" operation={neutral} />
       <StatisticsLine text="bad" operation={bad} />
       <StatisticsLine text="all" operation={all} />
       <StatisticsLine text="average" operation={average} />
       <StatisticsLine text="positive" operation={positive + ' %'} />
-    </div>
+      </tbody>
+    </table>
   )
 }
 
