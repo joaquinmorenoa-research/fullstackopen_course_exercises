@@ -6,6 +6,11 @@ const StatisticsShow = ({ text, operation }) => {
 
 const Statistics = ({ good, neutral, bad }) => {
   const all = good + neutral + bad
+
+  if (all === 0) {
+    return <p>No feedback given</p>
+  }
+
   const average = ((good - bad) / all).toFixed(2)
   const positive = ((good / all) * 100).toFixed(1)
 
